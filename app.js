@@ -29,9 +29,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors(corsOptions));
 
 // Routes
-app.use('/', require('./routes/index'))
 app.use('/ticket', require('./routes/ticket'))
-app.use('/user', require('./routes/user'))
 
 const port = process.env.PORT || 8080
 app.listen(port, () => console.log(`App up on port ${port}..`))
